@@ -1,0 +1,68 @@
+fun main(args: Array<String>) {
+    //println("Hello WORLD WOOOT IT WASNT THAT HARD HUH +")
+    //println("Hello WORLD WOOOT IT WASNT THAT HARD HUH x2")
+
+    // variables and types
+    //var javi: String= "Javier Alonso"
+    //println(javi)
+    //var javisWeeklySalary: Int=32
+    //var javisMonthlySalary: Int=javisWeeklySalary*4
+    //println("Javi's weekly salary is $javisWeeklySalary")
+    //difference between variables (mutable) and values (immutable)
+    /*val apples = 6.5
+    val oranges = 5.31
+    val fruits: Double = apples-oranges
+    println("$apples apples minus $oranges oranges equals $fruits fruits")
+    println("The division between $apples apples and $oranges oranges is ${apples/oranges}")
+    val weeks: Int = 1200
+    val years: Double = weeks/52.0
+    println(years)*/
+
+    //Conditionals
+    println("How old are you: ")
+    val userAge= readLine()!!.toDouble()
+    println("age is $userAge")
+    val message: String
+    message = if(userAge < 18.5){
+        "You're too young to vote"
+    } else if(userAge == 100.0) {
+        "Congratulations"
+    } else{
+        "You can vote"
+    }
+    /*message = when {
+        userAge < 18.5 -> "You're too young to vote"
+        userAge == 100.0 -> "Congratulations"
+        else -> "You can vote"
+    }*/
+    
+    println(message)
+
+
+
+
+
+
+
+    //printAvg(5.0,10.0)
+    //displayGreeting("You're a peasant"/*,"Javier"*/)
+}
+
+
+//method 1
+fun avg(a:Double, b:Double)=(a+b)/2
+
+//method 2
+fun avg2(a:Double, b:Double):Double{
+   return (a+b)/2
+}
+
+//method 3
+fun printAvg(a:Double,b:Double){
+    println("Average of ($a,$b) = ${(a+b)/2}")
+}
+// funciones con argumentos por default. Si le paso parametros por default, deben ser los ultimos o
+// selectivamente.
+fun displayGreeting(message: String, name: String = "Unidentified User"){
+    println("$name, $message")
+}
